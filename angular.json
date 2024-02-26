@@ -96,6 +96,39 @@
           }
         }
       }
+    },
+    "npx-notifications": {
+      "projectType": "library",
+      "root": "projects/npx-notifications",
+      "sourceRoot": "projects/npx-notifications/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/npx-notifications/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/npx-notifications/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/npx-notifications/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/npx-notifications/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {
