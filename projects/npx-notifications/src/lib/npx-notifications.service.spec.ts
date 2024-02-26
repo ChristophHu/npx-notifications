@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { NpxNotificationsService } from './npx-notifications.service';
+import { NpxNotificationsService } from './services/npx-notifications.service';
 
 describe('NpxNotificationsService', () => {
   let service: NpxNotificationsService;
