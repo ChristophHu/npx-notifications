@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
+import { Notification } from '../model/notification.model';
 
 @Injectable({
   providedIn: 'root'
@@ -17,6 +18,7 @@ export class NpxNotificationsService {
         observer.next(response)
         observer.complete()
       }})
+      console.log(note)
       this.add(note)
     })
   }
