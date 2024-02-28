@@ -6,7 +6,10 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "twpreprocess": "tailwindcss -c ./projects/demo/tailwind.config.js -o ./projects/npx-notifications/src/lib/tailwind.scss & ng build npx-notifications",
+    "preprocess": "ng build npx-notifications",
+    "publish": "cd dist/npx-notifications && npm publish --access public"
   },
   "private": true,
   "dependencies": {

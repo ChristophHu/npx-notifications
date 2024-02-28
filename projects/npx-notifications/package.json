@@ -1,12 +1,32 @@
 {
-  "name": "npx-notifications",
-  "version": "0.0.1",
+  "name": "@christophhu/npx-notifications",
+  "version": "1.0.0",
+  "description": "Create Angular notifications.",
+  "license": "MIT",
+  "author": {
+    "name": "Christoph Huschenhoefer",
+    "email": "christoph@nxt.codes"
+  },
+  "keywords": [
+    "angular",
+    "notifications",
+    "tailwindcss"
+  ],
   "peerDependencies": {
+    "@angular/cdk": "^17.2.0",
     "@angular/common": "^17.2.0",
     "@angular/core": "^17.2.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ChristophHu/npx-notifications.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ChristophHu/npx-notifications/issues"
+  },
+  "homepage": "https://github.com/ChristophHu/npx-notifications#readme",
   "sideEffects": false
 }

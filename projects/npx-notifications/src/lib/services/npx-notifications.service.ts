@@ -18,7 +18,6 @@ export class NpxNotificationsService {
         observer.next(response)
         observer.complete()
       }})
-      console.log(note)
       this.add(note)
     })
   }

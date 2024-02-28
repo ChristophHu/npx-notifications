@@ -47,8 +47,6 @@ export class NpxNotificationsComponent implements OnDestroy{
   destroy$: Subject<boolean> = new Subject<boolean>()
 
   constructor(private _npxNotificationsService: NpxNotificationsService) {
-    // console.log('notification config default:', this._configService.getNotificationConfig('default'))
-    // this._notificationsConfig = this._configService.getNotificationConfig('default')
     this._notificationsConfig = {
       position: 'top-right',
       type: 'info',
@@ -74,6 +72,7 @@ export class NpxNotificationsComponent implements OnDestroy{
       takeUntil(this.destroy$)
     )
     .subscribe((notification: any) => {
+      console.log('notification:', notification)
       if (!notification) return
 
       switch (notification.action) {
@@ -132,9 +131,11 @@ export class NpxNotificationsComponent implements OnDestroy{
     }
 
     this.notifications.push(notification)
+    console.log('notifications-add:', this.notifications)
   }
 
   remove(id: string) {
+    console.log('remove:', id)
     const notification = this.notifications.find(obj => obj.id === id)
 
     if (notification) {
@@ -152,6 +153,8 @@ export class NpxNotificationsComponent implements OnDestroy{
     }
 
     this.notifications = this.notifications.filter(obj => obj.id !== id)
+    console.log('notifications-remove:', this.notifications)
+
   }
 
   clear() {
