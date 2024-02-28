@@ -27,21 +27,18 @@ export class AppComponent implements OnInit {
 
   request() {
     this._notificationService.open({ type: 'request', header: 'Streife beendet', message: 'Möchten sie eine neue Streife vorbereiten?', autoClose: false })?.subscribe((data: any) => { 
-      console.log(data)
       // if (data == true) alert('yes')
     })
   }
 
   error() {
     this._notificationService.open({ type: 'error', header: 'Fehler', message: 'Es ist ein Fehler aufgetreten', autoClose: false })?.subscribe((data: any) => { 
-      console.log(data)
       // if (data == true) alert('yes')
     })
   }
 
   success() {
     this._notificationService.open({ type: 'success', header: 'Erfolg', message: 'Erfolgreich abgeschlossen', autoClose: false })?.subscribe((data: any) => { 
-      console.log(data)
       // if (data == true) alert('yes')
     })
   }
