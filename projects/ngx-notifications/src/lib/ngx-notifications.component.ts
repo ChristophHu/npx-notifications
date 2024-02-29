@@ -4,11 +4,11 @@ import { Component, EventEmitter, Input, OnDestroy, Output } from '@angular/core
 import { SaveHtmlPipe } from './pipes/save-html.pipe';
 import { PositionType } from './model/position.type';
 import { Subject, takeUntil } from 'rxjs';
-import { NpxNotificationsService } from '../public-api';
+import { NgxNotificationsService } from '../public-api';
 import { Notification } from './model/notification.model';
 
 @Component({
-  selector: 'npx-notifications',
+  selector: 'ngx-notifications',
   standalone: true,
   imports: [
     CommonModule
@@ -16,8 +16,8 @@ import { Notification } from './model/notification.model';
   providers: [
     SaveHtmlPipe
   ],
-  templateUrl: `./npx-notifications.component.html`,
-  styleUrls: ['./npx-notifications.component.sass'],
+  templateUrl: `./ngx-notifications.component.html`,
+  styleUrls: ['./ngx-notifications.component.sass'],
   animations: [
     trigger('fadeInRight', [
       state('void', style({ opacity: 0, transform: 'translate3d(100%, 0, 0)' })),
@@ -33,7 +33,7 @@ import { Notification } from './model/notification.model';
     ]),
   ]
 })
-export class NpxNotificationsComponent implements OnDestroy{
+export class NgxNotificationsComponent implements OnDestroy{
   @Input() position: PositionType = 'top-right'
 
   @Output() public onAdd: EventEmitter<any> = new EventEmitter<any>()
@@ -46,7 +46,7 @@ export class NpxNotificationsComponent implements OnDestroy{
 
   destroy$: Subject<boolean> = new Subject<boolean>()
 
-  constructor(private _npxNotificationsService: NpxNotificationsService) {
+  constructor(private _ngxNotificationsService: NgxNotificationsService) {
     this._notificationsConfig = {
       position: 'top-right',
       type: 'info',
@@ -67,7 +67,7 @@ export class NpxNotificationsComponent implements OnDestroy{
     }
 
     this.position = this._notificationsConfig.position
-    this._npxNotificationsService.get()
+    this._ngxNotificationsService.get()
     .pipe(
       takeUntil(this.destroy$)
     )

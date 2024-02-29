@@ -1,5 +1,5 @@
 {
-  "name": "@christophhu/npx-notifications",
+  "name": "@christophhu/ngx-notifications",
   "version": "1.0.0",
   "description": "Create Angular notifications.",
   "license": "MIT",
@@ -22,11 +22,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ChristophHu/npx-notifications.git"
+    "url": "https://github.com/ChristophHu/ngx-notifications.git"
   },
   "bugs": {
-    "url": "https://github.com/ChristophHu/npx-notifications/issues"
+    "url": "https://github.com/ChristophHu/ngx-notifications/issues"
   },
-  "homepage": "https://github.com/ChristophHu/npx-notifications#readme",
+  "homepage": "https://github.com/ChristophHu/ngx-notifications#readme",
   "sideEffects": false
 }

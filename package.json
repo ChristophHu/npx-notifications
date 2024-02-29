@@ -1,5 +1,5 @@
 {
-  "name": "npx-notifications",
+  "name": "ngx-notifications",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,9 +7,9 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "twpreprocess": "tailwindcss -c ./projects/demo/tailwind.config.js -o ./projects/npx-notifications/src/lib/tailwind.scss & ng build npx-notifications",
-    "preprocess": "ng build npx-notifications",
-    "publish": "cd dist/npx-notifications && npm publish --access public"
+    "twpreprocess": "tailwindcss -c ./projects/demo/tailwind.config.js -o ./projects/ngx-notifications/src/lib/tailwind.scss & ng build ngx-notifications",
+    "preprocess": "ng build ngx-notifications",
+    "publish": "cd dist/ngx-notifications && npm publish --access public"
   },
   "private": true,
   "dependencies": {

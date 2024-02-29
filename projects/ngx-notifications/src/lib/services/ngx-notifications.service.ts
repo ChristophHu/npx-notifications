@@ -5,11 +5,11 @@ import { Notification } from '../model/notification.model';
 @Injectable({
   providedIn: 'root'
 })
-export class NpxNotificationsService {
-  private _npxNotificationService = new Subject<any>()
+export class NgxNotificationsService {
+  private _ngxNotificationService = new Subject<any>()
   
   get() {
-    return this._npxNotificationService.asObservable()
+    return this._ngxNotificationService.asObservable()
   }
 
   open(notification: Partial<Notification>): Observable<any> | void {
@@ -23,14 +23,14 @@ export class NpxNotificationsService {
   }
 
   add(data: any) {
-    this._npxNotificationService.next({ action: 'add', data: data })
+    this._ngxNotificationService.next({ action: 'add', data: data })
   }
 
   remove(id: string) {
-    this._npxNotificationService.next({ action: 'remove', id })
+    this._ngxNotificationService.next({ action: 'remove', id })
   }
 
   clear() {
-    this._npxNotificationService.next({ action: 'clear' })
+    this._ngxNotificationService.next({ action: 'clear' })
   }
 }

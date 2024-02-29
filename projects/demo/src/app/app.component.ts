@@ -1,23 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { NpxNotificationsComponent, NpxNotificationsService } from '../../../npx-notifications/src/public-api';
+import { NgxNotificationsComponent, NgxNotificationsService } from '../../../ngx-notifications/src/public-api';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
-    NpxNotificationsComponent,
+    NgxNotificationsComponent,
     RouterOutlet
   ],
   providers: [
-    NpxNotificationsService
+    NgxNotificationsService
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.sass'
 })
 export class AppComponent implements OnInit {
 
-  constructor(private _notificationService: NpxNotificationsService) {
+  constructor(private _notificationService: NgxNotificationsService) {
 
   }
 

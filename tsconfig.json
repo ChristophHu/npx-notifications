@@ -15,8 +15,8 @@
     "declaration": false,
     "experimentalDecorators": true,
     "paths": {
-      "npx-notifications": [
-        "./dist/npx-notifications"
+      "ngx-notifications": [
+        "./dist/ngx-notifications"
       ]
     },
     "moduleResolution": "node",
