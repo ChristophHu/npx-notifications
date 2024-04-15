@@ -70,3 +70,50 @@
     -moz-user-select: none
     -ms-user-select: none
     user-select: none
+
+// debug
+body        
+    &.debug .debug-item-hide
+        @apply block
+
+    .debug-item-hide
+        @apply hidden
+
+@mixin nxt_label
+    @apply text-label
+
+@mixin nxt_input
+    @apply bg-input text-darker disabled:text-disabled placeholder:text-placeholder
+    
+// button
+.nxt_input
+    .nxt_input_label
+        @include nxt_label
+        @apply select-none
+
+    .nxt_input_field
+        @include nxt_input
+        @apply focus:border-static_gray border-borderline
+
+    .nxt_input_area
+        @include nxt_input
+        @apply focus:border-static_gray border-borderline
+
+// select
+.nxt_select
+    .nxt_select_label
+        @include nxt_label
+        @apply select-none
+
+    .nxt_select_field
+        @include nxt_input
+        @apply focus:border-static_gray border-borderline
+
+// checkbox
+.nxt_checkbox
+    .nxt_checkbox_label
+        @include nxt_label
+        @apply select-none
+
+    .nxt_checkbox_field
+        @apply bg-green-500

@@ -1,4 +1,4 @@
-<div class="fixed flex flex-col z-110" [ngClass]="position">
+<div class="fixed flex flex-col z-110 w-full md:w-128" [ngClass]="position">
     <div *ngFor="let notification of notifications" class="flex w-full md:w-128" @fadeInRight @fadeOutRight>
         <ng-container *ngIf="notification.type === 'error'">
             <div class="relative flex w-full m-2 items-center justify-start bg-tertiary border border-borderline text-darker text-base rounded-lg shadow-lg">
