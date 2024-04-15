@@ -1,5 +1,14 @@
 <ngx-notifications></ngx-notifications>
 
-<button (click)="request()" class="flex h-12 p-2 w-32 items-center justify-center bg-blue-500 rounded">Start</button>
-<button (click)="error()" class="flex h-12 p-2 w-32 items-center justify-center bg-red-500 rounded">Error</button>
-<button (click)="success()" class="flex h-12 p-2 w-32 items-center justify-center bg-green-500 rounded">Success</button>
+<div class="grid grid-cols-1 gap-2 m-2">
+    <button (click)="error()" class="flex h-12 p-2 w-32 items-center justify-center bg-red-500 rounded">Error</button>
+    <button (click)="request()" class="flex h-12 p-2 w-32 items-center justify-center bg-blue-500 rounded">Start</button>
+    <button (click)="success()" class="flex h-12 p-2 w-32 items-center justify-center bg-green-500 rounded">Success</button>
+    <button (click)="warning()" class="flex h-12 p-2 w-32 items-center justify-center bg-yellow-500 rounded">Warning</button>
+</div>
+
+<div class="m-2">
+    <h2>Playground</h2>
+</div>
+
+<pre class="m-2">Code</pre>

@@ -113,15 +113,6 @@ export class NgxNotificationsComponent implements OnDestroy{
 
     notification = Object.assign({ id: id, timeoutObj: timeout }, notification)
 
-    // if (notification.data) {
-    //   const fn = notification.data
-    //   notification.data = (response: any) => {
-    //     fn && typeof fn === 'function' && fn(response)
-    //     console.log('notification data:', response)
-    //     this.remove(id)
-    //   }
-    // }
-
     if (notification.onAdd) {
       notification.onAdd(notification)
     }
@@ -158,9 +149,6 @@ export class NgxNotificationsComponent implements OnDestroy{
   }
 
   clear() {
-    // this.notifications.forEach(snack => {
-    //   this.remove(snack.id)
-    // })
     if (this.notifications.length === 0) return
 
     this.notifications = []
